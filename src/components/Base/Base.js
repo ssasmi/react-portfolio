@@ -4,19 +4,14 @@ import { useLocation } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
+import Navigator from "../Navigator/Navigator";
+import Header from "../Header";
 import Copyright from "../Copyright";
-
 
 const drawerWidth = 256;
 
-const Navigator = () => {
-  return (<p>Navigator</p>);
-};
 const Content = () => {
   <p>Content</p>;
-};
-const Header = () => {
-  <p>Header</p>;
 };
 
 export default function Base() {
@@ -224,9 +219,25 @@ export default function Base() {
           component="nav"
           sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         >
-          {isSmUp ? null : <Navigator />}
+          {isSmUp ? null : (
+            <Navigator
+              PaperProps={{ style: { width: drawerWidth } }}
+              variant="temporary"
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              selectedIndex={selectedIndex}
+              setSelectedIndex={setSelectedIndex}
+              setColorMain={setColorMain}
+              setColorSecondary={setColorSecondary}
+            />
+          )}
 
-          <Navigator />
+          <Navigator
+            PaperProps={{ style: { width: drawerWidth } }}
+            sx={{ display: { sm: "block", xs: "none" } }}
+            selectedIndex={selectedIndex}
+            setSelectedIndex={setSelectedIndex}
+          />
         </Box>
         <Box
           sx={{
@@ -235,7 +246,11 @@ export default function Base() {
             flexDirection: "column",
           }}
         >
-          <Header onDrawerToggle={handleDrawerToggle} />
+          <Header
+            onDrawerToggle={handleDrawerToggle}
+            setColorMain={setColorMain}
+            setColorSecondary={setColorSecondary}
+          />
           <Box
             component="main"
             sx={{
