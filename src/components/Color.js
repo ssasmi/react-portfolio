@@ -31,9 +31,10 @@ const colorPalette = [
 ];
 
 const Color = ({ setColorMain, setColorSecondary }) => {
-  let renderColorPalette = colorPalette.map((color) => {
+  let renderColorPalette = colorPalette.map((color, id) => {
     return (
       <IconButton
+      key = {id}
         onClick={() => {
           colorSound();
           setColorMain(color.mainColor);

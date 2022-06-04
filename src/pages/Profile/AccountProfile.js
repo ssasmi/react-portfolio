@@ -28,7 +28,7 @@ import {
           }}
         >
           <Avatar
-            src={user.avatar}
+            src={`${user.avatar}`}
             sx={{
               height: 240,
               mb: 4.4,

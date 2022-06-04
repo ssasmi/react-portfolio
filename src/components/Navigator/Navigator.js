@@ -68,7 +68,7 @@ export default function Navigator(props) {
     props.setSelectedIndex(index);
   };
   return (
-    <Drawer elevation={10} variant="permanent" {...other}>
+    <Drawer elevation={10} variant="permanent">
       <List sx={{ mt: 4 }} disablePadding>
         <ListItem
           sx={{
@@ -87,22 +87,24 @@ export default function Navigator(props) {
             <ListItem sx={{ py: 2, px: 3 }}>
               <ListItemText sx={{ color: "#fff" }}>{id}</ListItemText>
             </ListItem>
-            {children.map(({ title: childId, menuIndex, icon, route }, index) => (
-              <ListItem disablePadding key={menuIndex}>
-                <ListItemButton
-                  component={Link}
-                  to={route}
-                  selected={props.selectedIndex === index}
-                  onClick={(event) => {
-                    handleListItemClick(event, index);
-                  }}
-                  sx={item}
-                >
-                  <ListItemIcon>{icon}</ListItemIcon>
-                  <ListItemText>{childId}</ListItemText>
-                </ListItemButton>
-              </ListItem>
-            ))}
+            {children.map(
+              ({ title: childId, menuIndex, icon, route }, index) => (
+                <ListItem disablePadding key={menuIndex}>
+                  <ListItemButton
+                    component={Link}
+                    to={route}
+                    selected={props.selectedIndex === index}
+                    onClick={(event) => {
+                      handleListItemClick(event, index);
+                    }}
+                    sx={item}
+                  >
+                    <ListItemIcon>{icon}</ListItemIcon>
+                    <ListItemText>{childId}</ListItemText>
+                  </ListItemButton>
+                </ListItem>
+              )
+            )}
 
             <Divider sx={{ mt: 4 }} />
           </Box>

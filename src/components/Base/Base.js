@@ -50,7 +50,7 @@ export default function Base() {
         setSelectedIndex(4);
         break;
       default:
-        setSelectedIndex(false);
+        setSelectedIndex(0);
     }
   }, []);
 
@@ -224,8 +224,6 @@ export default function Base() {
               onClose={handleDrawerToggle}
               selectedIndex={selectedIndex}
               setSelectedIndex={setSelectedIndex}
-              setColorMain={setColorMain}
-              setColorSecondary={setColorSecondary}
             />
           )}
 
