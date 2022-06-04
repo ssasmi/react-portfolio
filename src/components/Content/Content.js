@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Routes, Route } from "react-router-dom";
-import Bio from "../../pages/Bio";
+import Bio from "../../pages/Profile/Bio";
 // import Projects from "../portfolio-content/Projects";
 // import Contact from "../portfolio-content/Contact";
 // import Login from "../portfolio-content/Login";

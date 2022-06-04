@@ -1,10 +1,9 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { AccountProfile } from "./account-profile";
-import { AccountProfileDetails } from "./account-profile-details";
-import "./Bio.css";
+import { AccountProfile } from "./AccountProfile";
+import { AccountProfileDetails } from "./AccountProfileDetails";
 
-const Bio = ({ setSelectedIndex, btnSound }) => {
+const Bio = ({ setSelectedIndex }) => {
   let navigate = useNavigate();
   return (
     <>
@@ -23,7 +22,6 @@ const Bio = ({ setSelectedIndex, btnSound }) => {
             <Grid item lg={8} md={6} xs={12}>
               <AccountProfileDetails
                 setSelectedIndex={setSelectedIndex}
-                btnSound={btnSound}
                 navigate={navigate}
               />
             </Grid>
