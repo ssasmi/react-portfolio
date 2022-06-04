@@ -5,7 +5,6 @@ import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import "./Header.css";
 import { List, ListItem, ListItemText } from "@mui/material";
 import Color from "../Color";
 
@@ -34,10 +33,10 @@ function Header(props) {
             </Grid>
             <Grid
               component="div"
-              sx={{ display: "flex", mt: 2, justifyContent: "space-even" }}
+              sx={{ display: "flex", mt: 0, justifyContent: "space-even" }}
             >
               <List>
-                <ListItem edge="end">
+                <ListItem sx={{ mt: 0 }} edge="end">
                   <Color
                     setColorMain={props.setColorMain}
                     setColorSecondary={props.setColorSecondary}

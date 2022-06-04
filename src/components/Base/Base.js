@@ -5,14 +5,11 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Navigator from "../Navigator/Navigator";
-import Header from "../Header";
+import Header from "../Header/Header";
 import Copyright from "../Copyright";
+import Content from "../Content/Content";
 
 const drawerWidth = 256;
-
-const Content = () => {
-  <p>Content</p>;
-};
 
 export default function Base() {
   const [colorMain, setColorMain] = React.useState("#1976d2");

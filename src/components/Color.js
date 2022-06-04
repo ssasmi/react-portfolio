@@ -48,7 +48,7 @@ const Color = ({ setColorMain, setColorSecondary }) => {
   return (
     <Container
       sx={{
-        mt: 2,
+        mt: 1,
         display: "flex",
         justifyContent: "space-evenly",
         backgroundColor: "#0f2033",
