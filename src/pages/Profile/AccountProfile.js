@@ -12,7 +12,7 @@ import {
     skills:
       "JavaScript | ReactJS | Redux | Redux Toolkit | HTML5 | CSS3 | Github",
     jobTitle: "Senior Developer",
-    name: "Смирнов Александр",
+    name: "Джон До",
     skills2: "BEM | SCSS | GULP | Material-UI",
   };
   
